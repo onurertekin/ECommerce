@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center">
+    <figure class="card card-product-grid card-lg">
+        <a routerLink="/shop/{{product.id}}" class="img-wrap" data-abc="true"> <img src="{{product.pictureUrl}}" alt="{{product.name}}"> </a>
+        <figcaption class="info-wrap">
+            <div class="row">
+
+                <div class="col-md-9 col-xs-9"> <a routerLink="/shop/{{product.id}}" class="title" data-abc="true">{{product.name}}</a> </div>
+
+            </div>
+        </figcaption>
+        <div class="bottom-wrap-payment">
+            <figcaption class="info-wrap">
+                <div class="row">
+                    <div class="col-md-9 col-xs-9"> <a routerLink="/shop/{{product.id}}" class="title" data-abc="true">{{product.price | currency: "TRY":"":""}}</a> <span class="rated">VISA Platinum</span> </div>
+       
+                </div>
+            </figcaption>
+        </div>
+        <div class="bottom-wrap">
+            <button (click)="addItemToBasket()" type="button" class="btn btn-primary float-right">Satın Al</button>
+            <div class="price-wrap"> <a routerLink="/shop/{{product.id}}" class="btn btn-warning float-left" data-abc="true"> İncele </a> </div>
+            
+        </div>
+    </figure>
+</div>
